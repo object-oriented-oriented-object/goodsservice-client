@@ -1,6 +1,6 @@
 package cn.edu.xmu.goods.service;
 
-public interface ActivityServiceInterface {
+public interface PresaleServiceInterface {
     //根据商品skuId扣除预售商品库存
     boolean deductPresaleInventory(Long skuId, Integer amount);
 
