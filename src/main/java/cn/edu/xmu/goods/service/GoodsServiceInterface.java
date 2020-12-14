@@ -1,5 +1,6 @@
 package cn.edu.xmu.goods.service;
 
+import cn.edu.xmu.goods.model.dto.GoodsInfoDTO;
 import cn.edu.xmu.goods.model.dto.GoodsSkuDTO;
 
 import java.util.List;
@@ -11,14 +12,9 @@ public interface GoodsServiceInterface {
     // 根据商品skuId扣除（非预售非秒杀商品）库存
     boolean deductInventory(Long skuId, Integer amount);
 
-    // 根据商品skuId扣除预售商品库存
-    boolean deductPresaleInventory(Long skuId, Integer amount);
-
     // 根据商品skuId增加（非预售非秒杀商品）库存
     boolean increaseInventory(Long skuId, Integer amount);
 
-    // 根据商品skuId增加预售商品库存
-    boolean increasePresaleInventory(Long skuId, Integer amount);
 
     // 根据商品skuId获得商品价格
     Long findOriginalPriceBySkuId(Long skuId);
@@ -34,4 +30,7 @@ public interface GoodsServiceInterface {
 
     //通过两个skuId判断是不是属于一个spu，相同也是true
     Boolean anbleChange(Long newGoodSkuId, Long goodSkuId);
+
+    // 根据商品skuId获得商品信息
+    GoodsInfoDTO getGoodsInfoDTOBySkuId(Long skuId);
 }
