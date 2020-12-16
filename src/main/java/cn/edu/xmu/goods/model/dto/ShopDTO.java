@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 public class ShopDTO implements Serializable {
     private Long id;
     private String name;
-    private boolean state;
+    private Byte state;
     private LocalDateTime gmtCreate;
     private LocalDateTime gmtModified;
 }
