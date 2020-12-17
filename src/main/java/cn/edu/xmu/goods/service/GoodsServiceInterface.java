@@ -17,7 +17,7 @@ public interface GoodsServiceInterface {
 
 
     // 根据商品skuId获得商品价格
-    Long findOriginalPriceBySkuId(Long skuId);
+    Long findPriceBySkuId(Long skuId);
 
     // 根据商品skuId获得商品名称
     String getGoodsNameBySkuId(Long skuId);
