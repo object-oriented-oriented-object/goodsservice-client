@@ -25,8 +25,11 @@ public interface GoodsServiceInterface {
     // 根据skuId获取商品sku信息
     GoodsSkuDTO getSkuById(Long skuId);
 
-    // 根据shopId获取该商店的所有skuId
-    List<Long> getSkuByShopId(Long shopId);
+    // 查询一个skuId是否存在
+    Boolean hasGoodsSku(Long skuId);
+
+    //查询一个sku是否属于一个店铺
+    Boolean hasGoodsSku(Long skuId,Long shopId);
 
     //通过两个skuId判断是不是属于一个spu，相同也是true
     Boolean anbleChange(Long newGoodSkuId, Long goodSkuId);
